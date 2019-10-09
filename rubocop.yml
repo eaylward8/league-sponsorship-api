@@ -1,0 +1,9 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - bin/*
+    - db/**/*
+    - spec/*_helper.rb
+    - config/**/*
+Metrics/LineLength:
+  Max: 120

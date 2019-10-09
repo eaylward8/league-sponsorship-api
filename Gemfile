@@ -32,6 +32,8 @@ gem 'active_model_serializers'
 gem 'haversine'
 
 group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'rubocop', require: false

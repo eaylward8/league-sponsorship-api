@@ -2,7 +2,7 @@ class LeagueFinder
   attr_reader :search_location, :radius, :budget
   attr_accessor :remaining_budget
 
-  def initialize(search_location, radius, budget)
+  def initialize(search_location:, radius:, budget:)
     @search_location = search_location
     @radius = radius
     @budget = budget

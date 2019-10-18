@@ -1,6 +1,5 @@
 class League < ApplicationRecord
-  validates :name, presence: true
-  validates :name, uniqueness: true
+  validates :name, presence: true, uniqueness: true
   validates :price, numericality: { greater_than: 0 }
   validates :lat, numericality: { greater_than_or_equal_to: -90,
                                   less_than_or_equal_to: 90,

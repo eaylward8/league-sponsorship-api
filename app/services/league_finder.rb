@@ -3,10 +3,10 @@ class LeagueFinder
   attr_accessor :remaining_budget
 
   def initialize(search_location:, radius:, budget:)
-    @search_location = search_location
-    @radius = radius
-    @budget = budget
-    @remaining_budget = budget
+    @search_location = search_location.map(&:to_f)
+    @radius = radius.to_f
+    @budget = budget.to_i
+    @remaining_budget = @budget
   end
 
   def search

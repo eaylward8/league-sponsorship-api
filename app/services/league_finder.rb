@@ -21,14 +21,14 @@ class LeagueFinder
   private
 
   def within_radius?(league_location)
-    distance(search_location, league_location) <= radius
+    dist_from_search_location(league_location) <= radius
   end
 
   def within_budget?(league_price)
     (remaining_budget - league_price).positive?
   end
 
-  def distance(location1, location2)
-    Math.sqrt((location2[0] - location1[0])**2 + (location2[1] - location1[1])**2)
+  def dist_from_search_location(location)
+    Math.sqrt((location[0] - search_location[0])**2 + (location[1] - search_location[1])**2)
   end
 end
